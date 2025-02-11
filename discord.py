@@ -4,6 +4,8 @@ import subprocess
 import os
 import json
 
+os.system("pip install -r requirements.txt")
+
 # 設定機器人的指令前綴
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
