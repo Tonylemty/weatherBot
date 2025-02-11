@@ -33,6 +33,8 @@ def save_user_settings(user_id, settings):
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
+    if not os.path.exists("./weather"):
+        os.system("chmod +x build.sh && ./build.sh")
 
 # 定義 !weather 指令
 @bot.command(name="weather")
