@@ -122,4 +122,4 @@ async def set_unit(ctx, unit: str):
         await ctx.send("Unsupported unit. Supported units: metric, imperial")
 
 # 運行機器人
-bot.run("DISCORD_BOT_TOKEN")
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
