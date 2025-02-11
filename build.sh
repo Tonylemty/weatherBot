@@ -1,3 +1,3 @@
-apt update && apt install -y nlohmann-json3-dev
-g++ weather.cpp -o weather -lcurl -std=c++17
+#!/bin/bash
+g++ weather.cpp -o weather -I./ -lcurl -std=c++17
 chmod +x weather
