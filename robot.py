@@ -1,8 +1,23 @@
+import threading
 import discord
+from flask import Flask
 from discord.ext import commands
 import subprocess
 import os
 import json
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=8080)
+
+# 啟動 Flask 伺服器
+threading.Thread(target=run_flask, daemon=True).start()
 
 os.system("pip install -r requirements.txt")
 
