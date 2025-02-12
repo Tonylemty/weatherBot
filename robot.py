@@ -68,7 +68,7 @@ async def weather(ctx, city: str):
 
     # 呼叫 C++ 可執行文件
     try:
-        process = subprocess.Popen(["./weather", city, language, unit], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["./weather", city.strip(), language, unit], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
 
         # 檢查執行結果
