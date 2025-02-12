@@ -23,6 +23,9 @@ os.system("pip install -r requirements.txt")
 
 # 設定機器人的指令前綴
 intents = discord.Intents.default()
+intents.messages = True  # 啟用訊息權限
+intents.guilds = True    # 啟用伺服器相關權限
+intents.message_content = True  # 允許機器人讀取訊息內容
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # 用戶設定文件路徑
