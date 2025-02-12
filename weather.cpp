@@ -369,8 +369,7 @@ bool isFirstTime(const json &config) {
 }
 
 int main(int argc, char* argv[]) {
-    system("chcp 65001 > nul");
-
+    
     json settings = readSettings();
 
     // 如果提供了設定參數，則更新設定
